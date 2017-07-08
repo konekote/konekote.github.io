@@ -1,3 +1,19 @@
+##How to open
+For the index.hmtl in source, go to: https://konekote.github.io/src/index.html
+
+For the index.html in production, go to:
+https://konekote.github.io/dist/index.html
+
+For the pizza.html in source, go to:
+https://konekote.github.io/src/views/pizza.html
+
+For the pizza.html in production, go to:
+https://konekote.github.io/dist/views/pizza.html
+
+
+I tried to improve the 2 pages by eliminating any FSL, improving loading speed as well as scroll speed, minifying CSS and JS and optimizing images.
+
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
