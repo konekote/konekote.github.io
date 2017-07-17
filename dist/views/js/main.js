@@ -527,8 +527,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var rows = Math.floor(window.screen.height / s);
   var totalPizzas = cols * rows;
-  for (var i = 0; i < totalPizzas; i++) {
-    var elem = document.createElement('img');
+  for (var i = 0, elem; i < totalPizzas; i++) {
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
