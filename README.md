@@ -11,7 +11,19 @@ For the pizza.html in production, go to:
 https://konekote.github.io/dist/views/pizza.html
 
 
-I tried to improve the 2 pages by eliminating any FSL, improving loading speed as well as scroll speed, minifying CSS and JS and optimizing images.
+I tried to improve the 2 pages by eliminating any FSL, improving loading speed as well as scroll speed, minifying CSS and JS and optimizing images. The implemented optimizations are in order:
+- I first optimized the images and the Javascript,as well as minified the CSS in Index.html with the help of PageSpeed Insights
+- I then moved the CSS and Javascript to the end of the body tag and added a print media query to improve the loading speed. I also removed the unnecessary font style and deferred the loading of non-essential CSS
+- I then reverted back to normal CSS loading as I could not see a difference in the score or speed of the page and added async tags to analytics.js.
+- I ended my trials by trying CSS deferring once again using examples here: 
+https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery
+- Tried adding an image style to make images even smaller, however did not like the general aspect of it so removed it.
+- Added one requestAnimationFrame to updatePositions per scroll, per frame. 
+- Crated the src and dist directories and continued working in both. Documented a few changed in the ReadMe file. 
+- I then replaced all query selectors with getElementById and getElementByClass and extracted all element selecotrs out of the for loops.
+- Made variables for length for items and randomPizzas to prevent redundant calls.
+- Implemented a dyanmic mechanism for number of pizzas in background to keep the page scroll at 60 fps.
+- I then declared the elem var in the loop declaration and finished by documenting all other changes in the Readme file.
 
 
 ## Website Performance Optimization portfolio project
