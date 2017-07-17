@@ -399,6 +399,8 @@ var pizzaElementGenerator = function(i) {
 };
 
 // resizePizzas(size) is called when the slider in the "Our Pizzas" section of the website moves.
+var pizzaSize = document.getElementById("pizzaSize").innerHTML;
+
 var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API function
 
@@ -406,13 +408,13 @@ var resizePizzas = function(size) {
   function changeSliderLabel(size) {
     switch(size) {
       case "1":
-        document.querySelector("#pizzaSize").innerHTML = "Small";
+        pizzaSize = "Small";
         return;
       case "2":
-        document.querySelector("#pizzaSize").innerHTML = "Medium";
+        pizzaSize = "Medium";
         return;
       case "3":
-        document.querySelector("#pizzaSize").innerHTML = "Large";
+        pizzaSize = "Large";
         return;
       default:
         console.log("bug in changeSliderLabel");
@@ -437,7 +439,7 @@ var resizePizzas = function(size) {
           console.log("bug in sizeSwitcher");
       }
 
-    var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
+    var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
 
     for (var i = 0; i < randomPizzas.length; i++) {
     randomPizzas[i].style.width = newWidth + "%";
@@ -456,8 +458,8 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -517,7 +519,7 @@ function updatePositions() {
 // runs updatePositions on scroll
 window.addEventListener('scroll', updateScrollPosition);
 
-var allPizzas = document.querySelector("#movingPizzas1");
+var allPizzas = document.getElementById("movingPizzas1");
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
@@ -534,6 +536,6 @@ document.addEventListener('DOMContentLoaded', function() {
     allPizzas.appendChild(elem);
   }
 
-  items = document.querySelectorAll('.mover');
+  items = document.getElementsByClassName('mover');
   updatePositions();
 });
