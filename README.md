@@ -24,6 +24,7 @@ https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery
 - Made variables for length for items and randomPizzas to prevent redundant calls.
 - Implemented a dyanmic mechanism for number of pizzas in background to keep the page scroll at 60 fps.
 - I then declared the elem var in the loop declaration and finished by documenting all other changes in the Readme file.
+- As a last change, I added the pizzeria photos in original size, with compressed version and small version. Added them to pizza.html with original size, responsive, and to index.html with 100x75px. 
 
 
 ## Website Performance Optimization portfolio project
